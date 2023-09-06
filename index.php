@@ -5,6 +5,7 @@ $APPLICATION->SetPageProperty("keywords", "Биржа недвижимости")
 $APPLICATION->SetPageProperty("description", "Биржа недвижимости");
 $APPLICATION->SetTitle("Биржа недвижимости");
 ?><?
+$APPLICATION->SetPageProperty("NOT_SHOW_NAV_CHAIN", "Y");
 GLOBAL $arrFilter;
 $selectId = 5;
 $arrFilter = array("PROPERTY_PREFERRED_DEAL"=>$selectId);

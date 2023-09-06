@@ -10,7 +10,7 @@
               ".default", 
               array(
                 "AREA_FILE_SHOW" => "file",
-                "PATH" => "include/footer_about.php",
+                "PATH" => "/include/footer_about.php",
                 "COMPONENT_TEMPLATE" => ".default"
               ),
               false
@@ -44,7 +44,7 @@
               ".default", 
               array(
                 "AREA_FILE_SHOW" => "file",
-                "PATH" => "include/footer_social.php",
+                "PATH" => "/include/footer_social.php",
                 "COMPONENT_TEMPLATE" => ".default"
               ),
               false
@@ -62,7 +62,7 @@
               ".default", 
               array(
                 "AREA_FILE_SHOW" => "file",
-                "PATH" => "include/footer_copyright.php",
+                "PATH" => "/include/footer_copyright.php",
                 "COMPONENT_TEMPLATE" => ".default"
               ),
               false

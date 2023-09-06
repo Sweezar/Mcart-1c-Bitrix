@@ -76,7 +76,7 @@
                   ".default", 
                   array(
                     "AREA_FILE_SHOW" => "file",
-                    "PATH" => "include/phone.php",
+                    "PATH" => "/include/phone.php",
                     "COMPONENT_TEMPLATE" => ".default",
                     "EDIT_TEMPLATE" => ""
                   ),
@@ -91,7 +91,7 @@
                     ".default", 
                     array(
                       "AREA_FILE_SHOW" => "file",
-                      "PATH" => "include/email.php",
+                      "PATH" => "/include/email.php",
                       "COMPONENT_TEMPLATE" => ".default"
                     ),
                     false
@@ -105,7 +105,7 @@
             ".default", 
             array(
               "AREA_FILE_SHOW" => "file",
-              "PATH" => "include/social_list.php",
+              "PATH" => "/include/social_list.php",
               "COMPONENT_TEMPLATE" => ".default"
             ),
             false
@@ -125,7 +125,7 @@
               ".default", 
               array(
                 "AREA_FILE_SHOW" => "file",
-                "PATH" => "include/logo.php",
+                "PATH" => "/include/logo.php",
                 "COMPONENT_TEMPLATE" => ".default"
               ),
               false
@@ -150,13 +150,21 @@
               false
             );?>
 
-          <?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "breadcrumb", Array(
-            
-          ),
-          false
-          );?>
+          
 
         </div>
       </div>
     </div>
   </div>
+
+  <?$APPLICATION->IncludeComponent(
+	"bitrix:breadcrumb", 
+	"breadcrumb", 
+	array(
+		"COMPONENT_TEMPLATE" => "breadcrumb",
+		"START_FROM" => "0",
+		"PATH" => "",
+		"SITE_ID" => "s1"
+	),
+	false
+);?>
