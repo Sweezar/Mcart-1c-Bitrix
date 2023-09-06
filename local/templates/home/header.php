@@ -77,7 +77,8 @@
                   array(
                     "AREA_FILE_SHOW" => "file",
                     "PATH" => "include/phone.php",
-                    "COMPONENT_TEMPLATE" => ".default"
+                    "COMPONENT_TEMPLATE" => ".default",
+                    "EDIT_TEMPLATE" => ""
                   ),
                   false
                 );?>
@@ -134,20 +135,26 @@
 
             <!-- Верхнее меню -->
             <?$APPLICATION->IncludeComponent("bitrix:menu", "top_menu", Array(
-	"ALLOW_MULTI_SELECT" => "N",	// Разрешить несколько активных пунктов одновременно
-		"CHILD_MENU_TYPE" => "left",	// Тип меню для остальных уровней
-		"DELAY" => "N",	// Откладывать выполнение шаблона меню
-		"MAX_LEVEL" => "3",	// Уровень вложенности меню
-		"MENU_CACHE_GET_VARS" => "",	// Значимые переменные запроса
-		"MENU_CACHE_TIME" => "36000",	// Время кеширования (сек.)
-		"MENU_CACHE_TYPE" => "A",	// Тип кеширования
-		"MENU_CACHE_USE_GROUPS" => "Y",	// Учитывать права доступа
-		"ROOT_MENU_TYPE" => "top",	// Тип меню для первого уровня
-		"USE_EXT" => "N",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
-		"COMPONENT_TEMPLATE" => "horizontal_multilevel"
-	),
-	false
-);?>
+              "ALLOW_MULTI_SELECT" => "N",	// Разрешить несколько активных пунктов одновременно
+                "CHILD_MENU_TYPE" => "left",	// Тип меню для остальных уровней
+                "DELAY" => "N",	// Откладывать выполнение шаблона меню
+                "MAX_LEVEL" => "3",	// Уровень вложенности меню
+                "MENU_CACHE_GET_VARS" => "",	// Значимые переменные запроса
+                "MENU_CACHE_TIME" => "36000",	// Время кеширования (сек.)
+                "MENU_CACHE_TYPE" => "A",	// Тип кеширования
+                "MENU_CACHE_USE_GROUPS" => "Y",	// Учитывать права доступа
+                "ROOT_MENU_TYPE" => "top",	// Тип меню для первого уровня
+                "USE_EXT" => "N",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
+                "COMPONENT_TEMPLATE" => "horizontal_multilevel"
+              ),
+              false
+            );?>
+
+          <?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "breadcrumb", Array(
+            
+          ),
+          false
+          );?>
 
         </div>
       </div>
