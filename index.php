@@ -6,9 +6,9 @@ $APPLICATION->SetPageProperty("description", "Биржа недвижимост�
 $APPLICATION->SetTitle("Биржа недвижимости");
 ?><?
 $APPLICATION->SetPageProperty("NOT_SHOW_NAV_CHAIN", "Y");
-GLOBAL $arrFilter;
+GLOBAL $arrFilterPreferredDeal;
 $selectId = 5;
-$arrFilter = array("PROPERTY_PREFERRED_DEAL"=>$selectId);
+$arrFilterPreferredDeal = array("PROPERTY_PREFERRED_DEAL"=>$selectId);
 $APPLICATION->IncludeComponent(
 	"bitrix:news.list", 
 	"slider", 
@@ -36,7 +36,7 @@ $APPLICATION->IncludeComponent(
 			0 => "",
 			1 => "",
 		),
-		"FILTER_NAME" => "arrFilter",
+		"FILTER_NAME" => "arrFilterPreferredDeal",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "5",
 		"IBLOCK_TYPE" => "ads",
