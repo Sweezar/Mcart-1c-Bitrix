@@ -118,30 +118,33 @@ $APPLICATION->IncludeComponent(
 	</div>
 </div>
  <?$APPLICATION->IncludeComponent(
-	"bitrix:news.line",
-	"recommended",
-	Array(
+	"bitrix:news.line", 
+	"recommended", 
+	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"CACHE_GROUPS" => "Y",
 		"CACHE_TIME" => "300",
 		"CACHE_TYPE" => "A",
 		"COMPONENT_TEMPLATE" => "recommended",
-		"DETAIL_URL" => "",
+		"DETAIL_URL" => "#SITE_DIR##IBLOCK_CODE#?ELEMENT_ID=#ID#",
 		"FIELD_CODE" => array(
-			0=>"PREVIEW_PICTURE",
-			1=>"PROPERTY_PRICE",
-			2=>"PROPERTY_SQUARE",
-			3=>"PROPERTY_BATHROOMS",
-			4=>"PROPERTY_GARAGE",
+			0 => "PREVIEW_PICTURE",
+			1 => "PROPERTY_PRICE",
+			2 => "PROPERTY_SQUARE",
+			3 => "PROPERTY_BATHROOMS",
+			4 => "PROPERTY_GARAGE",
+			5 => "",
 		),
-		"IBLOCKS" => array(),
+		"IBLOCKS" => array(
+		),
 		"IBLOCK_TYPE" => "ads",
 		"NEWS_COUNT" => "9",
 		"SORT_BY1" => "ACTIVE_FROM",
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC"
-	)
+	),
+	false
 );?> <?$APPLICATION->IncludeComponent(
 	"bitrix:news.line",
 	"services",
