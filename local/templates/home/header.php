@@ -101,6 +101,17 @@
           </div>
           <div class="col-6 col-md-6 text-right">
           <?$APPLICATION->IncludeComponent(
+	"bitrix:main.include", 
+	".default", 
+	array(
+		"AREA_FILE_SHOW" => "file",
+		"PATH" => "/include/auth.php",
+		"COMPONENT_TEMPLATE" => ".default",
+		"EDIT_TEMPLATE" => ""
+	),
+	false
+);?>
+          <?$APPLICATION->IncludeComponent(
             "bitrix:main.include", 
             ".default", 
             array(
